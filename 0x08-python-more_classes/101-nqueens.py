@@ -61,5 +61,8 @@ if __name__ == "__main__":
 
     solve_n_queens(board, 0)
 
-    for solution in solutions:
-        print(solution)
+    if not solutions:
+        print("No solution found.")
+    else:
+        for solution in solutions:
+            print(solution)
