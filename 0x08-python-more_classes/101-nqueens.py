@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import sys
 
+
 def is_safe(board, row, col):
     # Check this row on the left side
     for i in range(col):
@@ -18,6 +19,7 @@ def is_safe(board, row, col):
             return False
 
     return True
+
 
 def solve_n_queens(board, col):
     if col >= N:
@@ -38,15 +40,18 @@ def solve_n_queens(board, col):
 
     return False
 
+
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: nqueens N")
+        print("Usage: ./101-nqueens.py N")
         sys.exit(1)
+
     try:
         N = int(sys.argv[1])
     except ValueError:
         print("N must be a number")
         sys.exit(1)
+
     if N < 4:
         print("N must be at least 4")
         sys.exit(1)
