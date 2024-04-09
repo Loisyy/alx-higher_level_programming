@@ -46,6 +46,10 @@ if __name__ == "__main__":
         print("Usage: ./101-nqueens.py N")
         sys.exit(1)
 
+    if sys.argv[1] == '-h' or sys.argv[1] == '--help':
+        print("Usage: ./101-nqueens.py N")
+        sys.exit(0)
+
     try:
         N = int(sys.argv[1])
     except ValueError:
