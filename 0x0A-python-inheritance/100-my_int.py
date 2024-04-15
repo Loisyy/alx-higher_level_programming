@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-Defines the MyList class, which inherits from the built-in list class.
-"""
+"""Defines a class MyInt that inherits from int."""
 
 
-class MyList(list):
-    """
-    Implements functionality for a list with sorted printing.
-    """
+class MyInt(int):
+    """Invert int operators == and !=."""
 
-    def print_sorted(self):
-        """
-        Print the list in ascending order.
-        """
-        print(sorted(self))
+    def __eq__(self, value):
+        """Override == opeartor with != behavior."""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with == behavior."""
+        return self.real == value
